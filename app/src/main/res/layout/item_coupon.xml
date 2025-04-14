@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/rounded_corner_stroke_10">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/tvDiscount"
+            android:layout_toStartOf="@+id/ivImg"
+            android:orientation="vertical"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text=""
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/color_primary"/>
+
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text=""
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/color_gray_light7"/>
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:text=""
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/_16sdp" />
+
+
+        <ImageView
+            android:id="@+id/ivImg"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:src="@drawable/ic_brown_next" />
+
+
+
+    </RelativeLayout>
+
+</layout>

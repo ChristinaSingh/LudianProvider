@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/white"
+      android:scrollbars="none">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/white"
+          >
+
+
+
+          <RelativeLayout
+              android:id="@+id/rlHeader"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="@dimen/_10sdp"
+              >
+
+
+              <ImageView
+                  android:id="@+id/ivBack"
+                  android:layout_width="@dimen/_20sdp"
+                  android:layout_height="@dimen/_20sdp"
+                  android:src="@drawable/ic_brown_back"
+                  android:layout_marginTop="@dimen/_5sdp"
+                  android:layout_marginStart="@dimen/_5sdp"/>
+
+          </RelativeLayout>
+
+          <LinearLayout
+              android:id="@+id/rlMain"
+              android:layout_below="@+id/rlHeader"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="@dimen/_15sdp"
+              android:visibility="gone"
+              android:background="@color/white">
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/describe_your_place"
+                  android:fontFamily="@font/poppins_bold"
+                  android:layout_gravity="center_vertical"
+                  android:textSize="@dimen/_16sdp"
+                  android:textColor="@color/black"
+                  />
+
+
+
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/rvPlaceType"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                  tools:listitem="@layout/item_place_type"/>
+
+
+              <androidx.appcompat.widget.AppCompatButton
+                  android:id="@+id/btnNext"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/_20sdp"
+                  android:layout_marginBottom="@dimen/_20sdp"
+                  android:background="@drawable/rounded_brown_btn_bg"
+                  android:fontFamily="@font/poppins_regular"
+                  android:padding="@dimen/_10sdp"
+                  android:text="@string/next"
+                  android:textAllCaps="false"
+                  android:textColor="@color/white"
+                  android:textSize="@dimen/_12sdp"
+                  />
+
+
+          </LinearLayout>
+
+
+
+      </RelativeLayout>
+
+
+  </androidx.core.widget.NestedScrollView>
+
+</layout>

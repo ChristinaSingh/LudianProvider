@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.ludianseller.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_homeFragment_to_keyStoreFragment"
+            app:destination="@id/navigation_ketStoreFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_booking"
+        android:name="com.ludianseller.ui.booking.BookingFragment"
+        android:label="fragment_booking"
+        tools:layout="@layout/fragment_booking" />
+<!--
+    <fragment
+        android:id="@+id/navigation_post"
+        android:name="com.ludianseller.ui.post.PostFragment"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_post" />
+-->
+
+
+    <fragment
+        android:id="@+id/navigation_post"
+        android:name="com.ludianseller.ui.post.AddPropertyFragment"
+        android:label="fragment_add_property"
+        tools:layout="@layout/fragment_add_property">
+
+
+        <action
+            android:id="@+id/action_addPropertyFragment_to_startFragment"
+            app:destination="@id/navigation_startFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+
+        <action
+            android:id="@+id/action_addPropertyFragment_to_exitingFragment"
+            app:destination="@id/navigation_exitingFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+
+
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/navigation_calenderPropertyList"
+        android:name="com.ludianseller.ui.calendar.CalenderDataListFragment"
+        android:label="fragment_calender_data_list"
+        tools:layout="@layout/fragment_calender_data_list">
+
+
+        <action
+            android:id="@+id/action_calenderPropertyList_to_calendarFragment"
+            app:destination="@id/navigation_calendar"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+
+    </fragment>
+
+
+
+
+
+
+
+    <fragment
+        android:id="@+id/navigation_calendar"
+        android:name="com.ludianseller.ui.calendar.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar"/>
+
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.ludianseller.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+
+
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.ludianseller.ui.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat"/>
+
+
+
+
+
+
+
+
+
+    <fragment
+        android:id="@+id/navigation_startFragment"
+        android:name="com.ludianseller.ui.post.fragment.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start">
+
+
+        <action
+            android:id="@+id/action_startFragment_to_describePlaceFragment"
+            app:destination="@id/navigation_describePlaceFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/navigation_exitingFragment"
+        android:name="com.ludianseller.ui.post.ExitingListFragment"
+        android:label="fragment_exiting"
+        tools:layout="@layout/fragment_exiting">
+
+
+       <!-- <action
+            android:id="@+id/action_startFragment_to_describePlaceFragment"
+            app:destination="@id/navigation_describePlaceFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>-->
+
+
+    </fragment>
+
+
+
+
+
+
+    <fragment
+        android:id="@+id/navigation_describePlaceFragment"
+        android:name="com.ludianseller.ui.post.fragment.DescribePlaceFragment"
+        android:label="fragment_describe_place"
+        tools:layout="@layout/fragment_describe_place">
+
+
+        <action
+            android:id="@+id/action_describePlaceFragment_to_rentTypeFragmentFragment"
+            app:destination="@id/navigation_rentTypeFragmentFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_rentTypeFragmentFragment"
+        android:name="com.ludianseller.ui.post.fragment.RentTypeFragment"
+        android:label="fragment_rent_type"
+        tools:layout="@layout/fragment_rent_type">
+
+
+        <action
+            android:id="@+id/action_rentTypeFragmentFragment_to_propertyAddressFragment"
+            app:destination="@id/navigation_propertyAddressFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/navigation_propertyAddressFragment"
+        android:name="com.ludianseller.ui.post.fragment.PropertyAddressFragment"
+        android:label="fragment_property_address"
+        tools:layout="@layout/fragment_property_address">
+
+
+        <action
+            android:id="@+id/action_propertyAddressFragment_to_propertyInsideFragment"
+            app:destination="@id/navigation_propertyInsideFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_propertyInsideFragment"
+        android:name="com.ludianseller.ui.post.fragment.PropertyInsideFragment"
+        android:label="fragment_property_inside"
+        tools:layout="@layout/fragment_property_inside">
+
+
+        <action
+            android:id="@+id/action_propertyInsideFragment_to_guestQuantityFragment"
+            app:destination="@id/navigation_guestQuantityFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_guestQuantityFragment"
+        android:name="com.ludianseller.ui.post.fragment.GuestQuantityFragment"
+        android:label="fragment_guest_quantity"
+        tools:layout="@layout/fragment_guest_quantity">
+
+
+        <action
+            android:id="@+id/action_guestQuantityFragment_to_guestOfferFragment"
+            app:destination="@id/navigation_guestOfferFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_guestOfferFragment"
+        android:name="com.ludianseller.ui.post.fragment.GuestOfferFragment"
+        android:label="fragment_guest_offer"
+        tools:layout="@layout/fragment_guest_offer">
+
+
+        <action
+            android:id="@+id/action_guestOfferFragment_to_picPhotoFragment"
+            app:destination="@id/navigation_PicPhotoFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_PicPhotoFragment"
+        android:name="com.ludianseller.ui.post.fragment.PicPhotoFragment"
+        android:label="fragment_pic_photo"
+        tools:layout="@layout/fragment_pic_photo">
+
+
+        <action
+            android:id="@+id/action_picPhotoFragment_to_propertyTitleFragment"
+            app:destination="@id/navigation_propertyTitleFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_propertyTitleFragment"
+        android:name="com.ludianseller.ui.post.fragment.PropertyTitleFragment"
+        android:label="fragment_property_title"
+        tools:layout="@layout/fragment_property_title">
+
+
+        <action
+            android:id="@+id/action_propertyTitleFragment_to_bookingConfirmationTypeSelectFragment"
+            app:destination="@id/navigation_bookingConfirmationTypeSelectFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_bookingConfirmationTypeSelectFragment"
+        android:name="com.ludianseller.ui.post.fragment.BookingConfirmationTypeSelectFragment"
+        android:label="fragment_booking_confirmation_type_select"
+        tools:layout="@layout/fragment_booking_confirmation_type_select">
+
+
+        <action
+            android:id="@+id/action_bookingConfirmationTypeSelectFragment_to_propertyPriceFragment"
+            app:destination="@id/navigation_propertyPriceFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_propertyPriceFragment"
+        android:name="com.ludianseller.ui.post.fragment.PropertyPriceFragment"
+        android:label="fragment_property_price"
+        tools:layout="@layout/fragment_property_price">
+
+
+        <action
+            android:id="@+id/action_propertyPriceFragment_to_addDiscountFragment"
+            app:destination="@id/navigation_addDiscountFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+        <action
+            android:id="@+id/action_propertyPriceFragment_to_propertyReviewFragment"
+            app:destination="@id/navigation_propertyReviewFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_addDiscountFragment"
+        android:name="com.ludianseller.ui.post.fragment.AddDiscountFragment"
+        android:label="fragment_add_discount"
+        tools:layout="@layout/fragment_add_discount">
+
+
+        <action
+            android:id="@+id/action_addDiscountFragment_to_propertyReviewFragment"
+            app:destination="@id/navigation_propertyReviewFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+    </fragment>
+
+
+
+
+
+
+    <fragment
+        android:id="@+id/navigation_propertyReviewFragment"
+        android:name="com.ludianseller.ui.post.fragment.PropertyReviewFragment"
+        android:label="fragment_property_review"
+        tools:layout="@layout/fragment_property_review">
+
+
+        <action
+            android:id="@+id/action_propertyReviewFragment_to_homeFragment"
+            app:destination="@id/navigation_home"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_ketStoreFragment"
+        android:name="com.ludianseller.ui.documentverify.KeyStoreFragment"
+        android:label="fragment_key_store"
+        tools:layout="@layout/fragment_key_store">
+
+
+<!--
+        <action
+            android:id="@+id/action_ketStoreFragment_to_chooseIDTypeFragment"
+            app:destination="@id/navigation_chooseIDTypeFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+-->
+
+
+
+        <action
+            android:id="@+id/action_ketStoreFragment_to_uploadDocumentFragment"
+            app:destination="@id/navigation_uploadDocumentFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/navigation_chooseIDTypeFragment"
+        android:name="com.ludianseller.ui.documentverify.ChooseIDTypeFragment"
+        android:label="fragment_choose_id_type"
+        tools:layout="@layout/fragment_choose_id_type">
+
+
+        <action
+            android:id="@+id/action_chooseIDTypeFragment_to_uploadDocumentFragment"
+            app:destination="@id/navigation_uploadDocumentFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_right_out"
+            app:popExitAnim="@anim/trans_right_out"/>
+
+
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/navigation_uploadDocumentFragment"
+        android:name="com.ludianseller.ui.documentverify.UploadDocumentFragment"
+        android:label="fragment_upload_document"
+        tools:layout="@layout/fragment_upload_document">
+
+
+         <action
+             android:id="@+id/action_uploadDocumentFragment_to_homeFragment"
+             app:destination="@id/navigation_home"
+             app:enterAnim="@anim/trans_left_in"
+             app:exitAnim="@anim/trans_right_out"
+             app:popExitAnim="@anim/trans_right_out"/>
+
+
+
+    </fragment>
+
+
+
+
+</navigation>

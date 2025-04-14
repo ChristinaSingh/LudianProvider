@@ -1,0 +1,105 @@
+package com.ludianseller.ui.calendar.model
+
+import java.io.Serializable
+
+data class BookingDetailModel(
+    val `data`: Data,
+    val message: String,
+    val status: String
+) : Serializable{
+    data class Data(
+        val booking_request_children: String,
+        val booking_request_created_at: String,
+        val booking_request_date_end: String,
+        val booking_request_date_start: String,
+        val booking_request_deleted_at: Any,
+        val booking_request_guests: String,
+        val booking_request_id: String,
+        val booking_request_order_id: Any,
+        val booking_request_promocode_id: Any,
+        val booking_request_property_id: String,
+        val booking_request_status: String,
+        val booking_request_updated_at: String,
+        val booking_request_user_id: String,
+        val checkout_date: String,
+        val orderNumber: String,
+        val orderSubTotal: String,
+        val orderTotal: String,
+        val payment_status: String,
+        val platformFee: String,
+        val promoCode_amount: String,
+        val promoCode_discount: String,
+        val promoCode_id: String,
+        val `property`: Property,
+        val taxFee: String,
+        val taxPercent: String
+    ) : Serializable{
+        data class Property(
+            val address: String,
+            val admin_status: String,
+            val approval_status: String,
+            val average_rating: String,
+            val bathrooms: String,
+            val bed_count: String,
+            val bedrooms: String,
+            val created_at: String,
+            val description: String,
+            val discount_id: String,
+            val guests: String,
+            val image_names: String,
+            val image_urls: List<String>,
+            val latitude: String,
+            val longitude: String,
+            val pets: String,
+            val price: String,
+            val price_tax: String,
+            val property_category_id: String,
+            val property_id: String,
+            val rent_id: String,
+            val rent_string_name: String,
+            val request_accept_type_id: String,
+            val select_amenities_ids: String,
+            val select_facility_ids: String,
+            val select_safety_ids: String,
+            val squreMeter: String,
+            val title: String,
+            val updated_at: String,
+            val user_detail: UserDetail,
+            val user_id: String,
+            val wifi: Boolean=false,
+
+
+        ) : Serializable{
+            data class UserDetail(
+                val account_status: String,
+                val address: String,
+                val app_update: String,
+                val country_code: String,
+                val created_at: String,
+                val device_id: String,
+                val device_type: String,
+                val dob: String,
+                val email: String,
+                val first_name: String,
+                val gender: String,
+                val general_notification: String,
+                val id: String,
+                val image: String,
+                val language: String,
+                val last_name: String,
+                val lat: String,
+                val lon: String,
+                val mobile: String,
+                val new_service_available: String,
+                val new_tips_available: String,
+                val otp: String,
+                val password: String,
+                val sound: String,
+                val type: String,
+                val updated_at: String,
+                val user_name: String,
+                val vibrate: String
+            ):Serializable
+        }
+    }
+}

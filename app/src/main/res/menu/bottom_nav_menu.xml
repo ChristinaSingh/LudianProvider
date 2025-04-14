@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/bottom_nav_home_icon"
+        android:title="@string/home" />
+
+
+    <item
+        android:id="@+id/navigation_booking"
+        android:icon="@drawable/bottom_nav_booking_icon"
+        android:title="@string/booking" />
+
+    <item
+        android:id="@+id/navigation_post"
+        android:title="" />
+
+
+   <!-- <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/bottom_nav_chat_icon"
+        android:title="@string/chats" />-->
+
+
+    <item
+        android:id="@+id/navigation_calenderPropertyList"
+        android:icon="@drawable/bottom_nav_calender_icon"
+        android:title="@string/calendar" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/bottom_nav_profile_icon"
+        android:title="@string/profile" />
+
+
+
+</menu>

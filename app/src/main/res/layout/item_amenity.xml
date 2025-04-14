@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp">
+
+        <ImageView
+            android:id="@+id/ivImg"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_pool"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tvNameType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pool"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@+id/ivImg"
+            android:layout_toStartOf="@+id/ivSelect"
+            />
+
+
+        <ImageView
+            android:id="@+id/ivSelect"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/ic_unselect_radio"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/_15sdp"/>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+   <uses-permission android:name="android.permission.VIBRATE"/>
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+
+
+    <application
+        android:name=".application.LUDIANSellerApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LUDIANSeller"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.auth.SplashAct"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".ui.auth.LoginAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <activity
+            android:name=".ui.auth.SignupAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+        <activity
+            android:name=".ui.auth.ForgotPassAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <activity
+            android:name=".ui.auth.VerifyAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <activity
+            android:name=".ui.auth.NewPassAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <activity
+            android:name=".ui.home.HomeAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+
+        <activity
+            android:name=".ui.profile.AboutAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <activity
+            android:name=".ui.profile.ChangePasswordAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+        <activity
+            android:name=".ui.profile.EditProfileAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+        <activity
+            android:name=".ui.profile.FaqAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <activity
+            android:name=".ui.profile.NotificationAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+        <activity
+            android:name=".ui.profile.PersonalInfoAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <activity
+            android:name=".ui.profile.PrivacyAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <activity
+            android:name=".ui.home.BookingDetailAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+
+        <activity
+            android:name=".ui.booking.OrderDetailAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <activity
+            android:name=".ui.booking.ChatAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+
+        <activity
+            android:name=".ui.post.PropertyDetailAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <activity
+            android:name=".ui.calendar.BookingDetailAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <activity
+            android:name=".ui.calendar.InvoiceAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+
+        <activity
+            android:name=".ui.booking.BookingCompleteInfoAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+        <activity
+            android:name=".ui.calendar.CouponListAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <activity
+            android:name=".ui.booking.RateToUserAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <activity
+            android:name=".ui.booking.CheckUserRateAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <activity
+            android:name=".ui.notification.NotificationAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LUDIANSeller" />
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+
+
+      <!--  <service
+            android:name=".pushnotification.MyFirebaseMessagingService2"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT"
+                    android:theme="@style/Theme.AppCompat" />
+            </intent-filter>
+        </service>-->
+
+
+        <service android:name=".pushnotification.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+
+        <meta-data
+            android:name="com.google.firebase.MESSAGING_DEFAULT_CHANNEL_ID"
+            android:value="@string/default_notification_channel_id" />
+
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_logo" />
+
+        <!-- Optional: Specify a default color for Firebase notifications -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/color_primary" />
+
+
+    </application>
+
+</manifest>
